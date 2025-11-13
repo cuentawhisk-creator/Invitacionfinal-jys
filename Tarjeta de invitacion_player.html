@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarjeta de Invitación Interactiva</title>
+    <link rel="stylesheet" type="text/css" href="skins/skin.css">
+</head>
+<body>
+    <div id="ct-container">
+        <video id="ct-video" width="100%" height="100%" controls>
+    <source src="https://ia601407.us.archive.org/26/items/tarjeta-de-invitacion/Tarjeta%20de%20invitacion.mp4" type="video/mp4">
+</video>
+
+    </div>
+
+    <script src="scripts/ct.js"></script>
+    <script src="scripts/ctplayer.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof CTPlayer !== "undefined") {
+                var player = new CTPlayer("ct-video", "Tarjeta de invitacion_config.xml");
+                player.init();
+            } else {
+                console.error("CTPlayer no se cargó correctamente.");
+            }
+        });
+    </script>
+</body>
+</html>
